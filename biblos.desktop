@@ -8,4 +8,4 @@ Terminal=false
 MultipleArgs=false
 Type=Application
 Categories=Application;Utility;
-
+# vi: encoding=utf-8
