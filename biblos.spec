@@ -51,7 +51,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_applnkdir}/Utilities/}
 cd %{name}-%{version}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
-install images/logo.jpg $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-logo.jpg
+install images/logo.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-logo.png
 install %{SOURCE1} $RPM_BUILD_ROOT/%{_applnkdir}/Utilities/
 
 %clean
