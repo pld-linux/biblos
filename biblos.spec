@@ -10,16 +10,16 @@ Source0:	http://biblos.f2g.net/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-qt_mt.patch
 URL:		http://biblos.f2g.net/
-BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	expat-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Biblos is intended to be an easy to use file indexing tool that
 can manage your mp3 collection, your cds collection and even
-local directories. It is distributed under GNU Public License
+local directories. It is distributed under GNU General Public License
 and Q Public License and it is a work in progress. The following
 things are not implemented:
 
