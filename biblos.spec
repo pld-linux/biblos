@@ -6,6 +6,7 @@ Release:	1
 License:	GPL or QPL
 Group:		X11/Applications
 Source0:	http://biblos.f2g.net/%{name}-%{version}.tar.gz
+# Source0-md5:	eb430f123edd636ab1e75e7b56252034
 Source1:	%{name}.desktop
 Patch0:		%{name}-qt_mt.patch
 URL:		http://biblos.f2g.net/
