@@ -2,7 +2,7 @@ Summary:	Indexing tool to manage cds collection
 Summary(pl):	Program do katalogowania p³yt CD
 Name:		biblos
 Version:	0.35
-Release:	1	
+Release:	1
 License:	GPL or QPL
 Group:		X11/Applications
 Source0:	http://biblos.f2g.net/%{name}-%{version}.tar.gz
@@ -17,12 +17,12 @@ BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Biblos is intended to be an easy to use file indexing tool that 
+Biblos is intended to be an easy to use file indexing tool that
 can manage your mp3 collection, your cds collection and even
-local directories. It is distributed under GNU Public License 
+local directories. It is distributed under GNU Public License
 and Q Public License and it is a work in progress. The following
 things are not implemented:
-  
+
 - Delete object button
 - Properties button
 - Biblos Manual button
