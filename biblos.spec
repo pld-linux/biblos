@@ -1,11 +1,8 @@
-#
-# TODO:
-# - remove openoffice-lib dependence,
 Summary:	Indexing tool to manage cds collection
 Summary(pl):	Program do katalogowania p³yt CD
 Name:		biblos
 Version:	0.35
-Release:	0.2
+Release:	1	
 License:	GPL or QPL
 Group:		X11/Applications
 Source0:	http://biblos.f2g.net/%{name}-%{version}.tar.gz
