@@ -11,6 +11,7 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-qt_mt.patch
 URL:		http://biblos.f2g.net/
 BuildRequires:	expat-devel
+BuildRequires:	qmake
 BuildRequires:	libstdc++-devel
 BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	zlib-devel
@@ -43,21 +44,22 @@ zaimplementowane:
 
 %prep
 %setup -qcT
-tar xzf %{SOURCE0} -C ..
-chmod +x . images mc help
-%patch0 -p1
+tar xzf %{SOURCE0} -C . 
+chmod -R +x %{name}-%{version}
+%patch0 -p0
 
 %build
+mv %{name}-%{version}/* .
 qmake biblos.pro
 %{__make} QTDIR="/usr" CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_applnkdir}/Utilities}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_desktopdir}}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install images/logo.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-logo.png
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,4 +69,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/{AUTHORS,HISTORY,TODO,WARNING,WHATIS}
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/*
-%{_applnkdir}/Utilities/*
+%{_desktopdir}/*
