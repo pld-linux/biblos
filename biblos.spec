@@ -38,15 +38,18 @@ qmake
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+cd %{name}-%{version}
+
+install %{name} $RPM_BUILD_ROOT%{_bindir}
+install -d {images,help,mc} $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc %{name}-%{version}/doc
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
