@@ -1,0 +1,11 @@
+diff -Nur biblos-0.35/biblos.pro biblos-0.35-pro-patch/biblos.pro
+--- biblos-0.35/biblos.pro	Mon Apr  7 20:36:51 2003
++++ biblos-0.35-pro-patch/biblos.pro	Thu Apr 24 22:58:53 2003
+@@ -11,6 +11,6 @@
+ FORMS	= biblos.ui finddialog.ui easycopylist.ui 
+ IMAGES	= images/editdelete.png images/searchfind.png images/filenew.png images/fileopen.png images/filesave.png images/infomini.png images/import.png images/untitled1.png images/filesaveas.png images/book.png images/manual.png mc/i-directory.png mc/i-regular.png images/logo.png images/1.png 
+ TEMPLATE	=app
+-CONFIG	+= qt warn_on debug
++CONFIG	+= qt warn_on thread release
+ DBFILE	= biblos.db
+ LANGUAGE	= C++
