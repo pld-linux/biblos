@@ -12,6 +12,7 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://biblos.f2g.net/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
 URL:		http://biblos.f2g.net/
 BuildRequires:	qt-devel >= 3.0.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -45,12 +46,13 @@ qmake
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_applnkdir}/Utilities/}
 
 cd %{name}-%{version}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
-install -d {images,help,mc} $RPM_BUILD_ROOT%{_datadir}/%{name}
+install images/logo.jpg $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-logo.jpg
+install %{SOURCE1} $RPM_BUILD_ROOT/%{_applnkdir}/Utilities/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %{name}-%{version}/doc
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+%{_pixmapsdir}/*
