@@ -1,3 +1,9 @@
+#
+# TODO:
+# - remove openoffice-lib dependence,
+# - maybe some fix at %prep, 
+# - polish description,
+# - more BRs ?,
 Summary:	indexing tool to manage cds collection
 Summary(pl):	program do katalogowania p³yt cd
 Name:		biblos
@@ -26,6 +32,7 @@ The following things are not implemented :
 %description -l pl
 
 %prep
+rm -rf ../BUILD/%{name}-%{version}
 tar -zxf %{SOURCE0} -C ../BUILD
 chmod 700 ../BUILD/%{name}-%{version}
 cd ../BUILD/%{name}-%{version}
