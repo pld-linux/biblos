@@ -61,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %{name}-%{version}/doc
 %attr(755,root,root) %{_bindir}/*
-%{_pixmapsdir}/*
+%{_pixmapsdir}/Utilites/*
