@@ -1,7 +1,6 @@
 #
 # TODO:
 # - remove openoffice-lib dependence,
-# - maybe some fix at %prep, 
 # - more BRs ?,
 Summary:	Indexing tool to manage cds collection
 Summary(pl):	Program do katalogowania p³yt cd
@@ -42,22 +41,17 @@ zaimplementowane:
 - program nie indeksuje dowi±zañ
 
 %prep
-rm -rf ../BUILD/%{name}-%{version}
-tar -zxf %{SOURCE0} -C ../BUILD
-chmod 700 ../BUILD/%{name}-%{version}
-cd ../BUILD/%{name}-%{version}
-chmod 700 images mc help
+%setup -qcT
+tar xzf %{SOURCE0} -C ..
+chmod +x . images mc help
 
 %build
-cd %{name}-%{version}
-qmake
+qmake biblos.pro
 %{__make} QTDIR="/usr" CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_applnkdir}/Utilities}
-
-cd %{name}-%{version}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install images/logo.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}-logo.png
@@ -68,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{name}-%{version}/doc
+%doc doc/{AUTHORS,HISTORY,TODO,WARNING,WHATIS}
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/*
 %{_applnkdir}/Utilities/*
