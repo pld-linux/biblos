@@ -1,7 +1,6 @@
 #
 # TODO:
 # - remove openoffice-lib dependence,
-# - more BRs ?,
 Summary:	Indexing tool to manage cds collection
 Summary(pl):	Program do katalogowania p³yt cd
 Name:		biblos
@@ -13,6 +12,9 @@ Source0:	http://biblos.f2g.net/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://biblos.f2g.net/
 BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	expat-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
