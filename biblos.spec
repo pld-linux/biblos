@@ -2,14 +2,15 @@
 # TODO:
 # - remove openoffice-lib dependence,
 Summary:	Indexing tool to manage cds collection
-Summary(pl):	Program do katalogowania p³yt cd
+Summary(pl):	Program do katalogowania p³yt CD
 Name:		biblos
 Version:	0.35
-Release:	0.1
+Release:	0.2
 License:	GPL or QPL
 Group:		X11/Applications
 Source0:	http://biblos.f2g.net/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Patch0:		%{name}-qt_mt.patch
 URL:		http://biblos.f2g.net/
 BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	expat-devel
@@ -46,6 +47,7 @@ zaimplementowane:
 %setup -qcT
 tar xzf %{SOURCE0} -C ..
 chmod +x . images mc help
+%patch0 -p1
 
 %build
 qmake biblos.pro
