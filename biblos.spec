@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Biblos is intended to be an easy to use file indexing tool that
-can manage your mp3 collection, your cds collection and even
+can manage your MP3 collection, your cds collection and even
 local directories. It is distributed under GNU General Public License
 and Q Public License and it is a work in progress. The following
 things are not implemented:
@@ -30,7 +30,7 @@ things are not implemented:
 
 %description -l pl
 Biblos ma byæ ³atwym w u¿yciu narzêdziem do indeksowania plików,
-mog±cym zarz±dzaæ kolekcj± plików mp3, p³yt CD lub nawet lokalnymi
+mog±cym zarz±dzaæ kolekcj± plików MP3, p³yt CD lub nawet lokalnymi
 katalogami. Jest rozpowszechniany na Powszechnej Licencji Publicznej
 GNU (GPL) oraz Licencji Publicznej Q (QPL, Q Public License) i jest
 w trakcie tworzenia. Nastêpuj±ce rzeczy jeszcze nie zosta³y
