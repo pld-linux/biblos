@@ -69,4 +69,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/{AUTHORS,HISTORY,TODO,WARNING,WHATIS}
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
