@@ -1,5 +1,5 @@
 Summary:	Indexing tool to manage cds collection
-Summary(pl):	Program do katalogowania p³yt CD
+Summary(pl.UTF-8):   Program do katalogowania pÅ‚yt CD
 Name:		biblos
 Version:	0.35
 Release:	1
@@ -29,18 +29,18 @@ things are not implemented:
 - Biblos Manual button
 - the program does not index links
 
-%description -l pl
-Biblos ma byæ ³atwym w u¿yciu narzêdziem do indeksowania plików,
-mog±cym zarz±dzaæ kolekcj± plików MP3, p³yt CD lub nawet lokalnymi
+%description -l pl.UTF-8
+Biblos ma byÄ‡ Å‚atwym w uÅ¼yciu narzÄ™dziem do indeksowania plikÃ³w,
+mogÄ…cym zarzÄ…dzaÄ‡ kolekcjÄ… plikÃ³w MP3, pÅ‚yt CD lub nawet lokalnymi
 katalogami. Jest rozpowszechniany na Powszechnej Licencji Publicznej
 GNU (GPL) oraz Licencji Publicznej Q (QPL, Q Public License) i jest
-w trakcie tworzenia. Nastêpuj±ce rzeczy jeszcze nie zosta³y
+w trakcie tworzenia. NastÄ™pujÄ…ce rzeczy jeszcze nie zostaÅ‚y
 zaimplementowane:
 
 - przycisk usuwania obiektu
-- przycisk w³a¶ciwo¶ci
-- przycisk podrêcznika
-- program nie indeksuje dowi±zañ
+- przycisk wÅ‚aÅ›ciwoÅ›ci
+- przycisk podrÄ™cznika
+- program nie indeksuje dowiÄ…zaÅ„
 
 %prep
 %setup -qcT
