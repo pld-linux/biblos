@@ -1,5 +1,5 @@
 Summary:	Indexing tool to manage cds collection
-Summary(pl.UTF-8):   Program do katalogowania płyt CD
+Summary(pl.UTF-8):	Program do katalogowania płyt CD
 Name:		biblos
 Version:	0.35
 Release:	1
