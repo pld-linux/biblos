@@ -13,7 +13,7 @@ URL:		http://biblos.f2g.net/
 BuildRequires:	expat-devel
 BuildRequires:	qmake
 BuildRequires:	libstdc++-devel
-BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	qt-devel >= 3:3.0.5
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
