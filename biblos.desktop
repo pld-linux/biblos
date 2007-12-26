@@ -1,9 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=biblos
 Name[pl]=biblos
 Exec=biblos
-Icon=biblos-logo.png
+Icon=biblos-logo
 Terminal=false
 MultipleArgs=false
 Type=Application
